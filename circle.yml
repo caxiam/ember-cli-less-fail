@@ -1,0 +1,16 @@
+# circle.yml
+machine:
+  node:
+    version: 6.9.2
+
+dependencies:
+  override:
+    - npm install -g ember-cli@2.10.0
+    - npm install -g bower@1.8.0
+    - npm install -g phantomjs-prebuilt
+    - npm install
+    - bower install
+
+test:
+  override:
+    - ember test
